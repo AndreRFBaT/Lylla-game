@@ -1,0 +1,57 @@
+# Godot 4+ specific ignores
+.godot/
+.nomedia
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_credentials.cfg
+*.tmp
+
+# Private keys (Android/iOS keystores)
+*.keystore
+*.jks
+*.p12
+*.pem
+*.mobileprovision
+
+# User config
+*.pck.import
+*.translation.import
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+
+# Exe/Builds and artifacts
+*.apk
+*.aab
+*.exe
+*.zip
+*.tar.gz
+*.html
+*.pck
+build/
+bin/
+
+# Editor config
+.vscode/
+.vs/
+.idea/
+*.suo
+*.user
+*.userosv
+*.sln.docstates
+
+# OS / temp files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
