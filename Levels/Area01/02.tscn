@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://7cfc2maong5k"]
+
+[ext_resource type="Script" uid="uid://cx0b14d2m3tdb" path="res://Levels/Scripts/level.gd" id="1_mwxiv"]
+[ext_resource type="PackedScene" uid="uid://bf746esgvktuf" path="res://Tile Maps/grass 01.tscn" id="1_wkbf4"]
+[ext_resource type="PackedScene" uid="uid://dcbubdc7g7336" path="res://Levels/player_spawn.tscn" id="2_x70af"]
+[ext_resource type="PackedScene" uid="uid://d31fpabs7pp8e" path="res://Props/Plants/plant.tscn" id="3_x70af"]
+[ext_resource type="PackedScene" uid="uid://6uvaam3ycc68" path="res://Enemies/Slime/Slime.tscn" id="4_tek06"]
+[ext_resource type="PackedScene" uid="uid://t8urtm4tn4ko" path="res://Levels/level_transition.tscn" id="6_wi5as"]
+
+[node name="02" type="Node2D" unique_id=1747147378]
+y_sort_enabled = true
+script = ExtResource("1_mwxiv")
+
+[node name="Grass01" parent="." unique_id=1378584361 instance=ExtResource("1_wkbf4")]
+position = Vector2(128, 96)
+layer_0/tile_data = PackedInt32Array(-131076, 131072, 4, -65540, 131072, 5, -4, 131072, 6, 65532, 917504, 4, 131068, 917504, 5, 196604, 917504, 5, 262140, 917504, 5, 327676, 917504, 5, -131075, 196608, 4, -65539, 196608, 5, -3, 196608, 6, 65533, 65536, 2, 131069, 65536, 2, 196605, 65536, 2, 262141, 65536, 2, 327677, 65536, 2, -131074, 262144, 4, -65538, 262144, 5, -2, 262144, 6, 65534, 65536, 2, 131070, 65536, 2, 196606, 65536, 2, 262142, 65536, 2, 327678, 65536, 2, -131073, 131072, 4, -65537, 131072, 5, -1, 131072, 6, 65535, 65536, 2, 131071, 65536, 2, 196607, 65536, 2, 262143, 65536, 2, 327679, 65536, 2, -196608, 196608, 4, -131072, 196608, 5, -65536, 196608, 6, 0, 65536, 2, 65536, 65536, 2, 131072, 65536, 2, 196608, 65536, 2, 262144, 65536, 2, -196607, 917504, 6, -131071, 589824, 7, -65535, 917504, 7, 1, 65536, 2, 65537, 65536, 2, 131073, 65536, 2, 196609, 65536, 2, 262145, 65536, 2, -196606, 65536, 2, 2, 65536, 2, 65538, 65536, 2, 131074, 65536, 2, 196610, 65536, 2, 262146, 65536, 2, -196605, 65536, 2, -131069, 65536, 2, -65533, 65536, 2, 3, 65536, 2, 65539, 65536, 2, 131075, 65536, 2, 196611, 65536, 2, 262147, 65536, 2, -196604, 65536, 2, -131068, 65536, 2, -65532, 65536, 2, 4, 65536, 2, 65540, 65536, 2, 131076, 65536, 2, 196612, 65536, 2, 262148, 65536, 2, -196603, 655360, 6, -131067, 589824, 6, -65531, 655360, 7, 5, 65536, 2, 65541, 65536, 2, 131077, 65536, 2, 196613, 65536, 2, 262149, 65536, 2, -196602, 196608, 4, -131066, 196608, 5, -65530, 720896, 7, 6, 65536, 2, 65542, 65536, 2, 131078, 65536, 2, 196614, 65536, 2, 262150, 65536, 2, -196601, 262144, 4, -131065, 262144, 5, -65529, 262144, 6, 7, 65536, 2, 65543, 65536, 2, 131079, 65536, 2, 196615, 65536, 2, 262151, 65536, 2, -196600, 131072, 4, -131064, 131072, 5, -65528, 131072, 6, 8, 65536, 2, 65544, 65536, 2, 131080, 65536, 2, 196616, 65536, 2, 262152, 65536, 2, -196599, 196608, 4, -131063, 196608, 5, -65527, 196608, 6, 9, 65536, 2, 65545, 65536, 2, 131081, 65536, 2, 196617, 65536, 2, 262153, 65536, 2, -196598, 262144, 4, -131062, 262144, 5, -65526, 262144, 6, 10, 65536, 2, 65546, 65536, 2, 131082, 65536, 2, 196618, 65536, 2, 262154, 65536, 2, 393212, 917504, 5, 458748, 917504, 5, 524284, 917504, 5, 393213, 65536, 2, 458749, 655360, 4, 524285, 655360, 5, 393214, 65536, 2, 458750, 720896, 4, 524286, 65536, 2, 393215, 65536, 2, 458751, 720896, 4, 524287, 65536, 2, 327680, 65536, 2, 393216, 720896, 4, 458752, 65536, 2, 327681, 65536, 2, 393217, 720896, 4, 458753, 65536, 2, 327682, 65536, 2, 393218, 720896, 4, 458754, 65536, 2, 327683, 65536, 2, 393219, 720896, 4, 458755, 65536, 2, 327684, 65536, 2, 393220, 917504, 4, 458756, 655360, 7, 327685, 65536, 2, 393221, 65536, 2, 458757, 196608, 5, 327686, 65536, 2, 393222, 65536, 2, 458758, 196608, 5, 327687, 65536, 2, 393223, 65536, 2, 458759, 851968, 7, 327688, 65536, 2, 393224, 65536, 2, 458760, 720896, 7, 327689, 65536, 2, 393225, 65536, 2, 458761, 786432, 7, 327690, 65536, 2, 393226, 65536, 2, 458762, 917504, 1610612743, -196597, 131072, 4, -131061, 131072, 5, -65525, 131072, 6, 11, 655360, 4, 65547, 655360, 5, 131083, 655360, 5, 196619, 655360, 5, 262155, 655360, 5, 327691, 655360, 5, 393227, 655360, 5, 458763, 655360, 5, -65534, 131072, 1, -131070, 65536, 2)
+
+[node name="PlayerSpawn" parent="." unique_id=1509006313 instance=ExtResource("2_x70af")]
+position = Vector2(240, 50)
+
+[node name="Plants" type="Node2D" parent="." unique_id=1895974867]
+y_sort_enabled = true
+
+[node name="Plant" parent="Plants" unique_id=1567245201 instance=ExtResource("3_x70af")]
+position = Vector2(49, 246)
+
+[node name="Plant2" parent="Plants" unique_id=560890855 instance=ExtResource("3_x70af")]
+position = Vector2(198, 163)
+
+[node name="Plant3" parent="Plants" unique_id=911280076 instance=ExtResource("3_x70af")]
+position = Vector2(303, 289)
+
+[node name="Plant4" parent="Plants" unique_id=1665996724 instance=ExtResource("3_x70af")]
+position = Vector2(341, 289)
+
+[node name="Plant5" parent="Plants" unique_id=1868154226 instance=ExtResource("3_x70af")]
+position = Vector2(383, 288)
+
+[node name="Plant6" parent="Plants" unique_id=658257118 instance=ExtResource("3_x70af")]
+position = Vector2(320, 105)
+
+[node name="Enemies" type="Node2D" parent="." unique_id=55275125]
+y_sort_enabled = true
+
+[node name="Slime" parent="Enemies" unique_id=882579076 instance=ExtResource("4_tek06")]
+position = Vector2(199, 249)
+
+[node name="Slime2" parent="Enemies" unique_id=1295091128 instance=ExtResource("4_tek06")]
+position = Vector2(49, 107)
+
+[node name="Slime3" parent="Enemies" unique_id=1207483873 instance=ExtResource("4_tek06")]
+position = Vector2(412, 119)
+
+[node name="Slime4" parent="Enemies" unique_id=1496790721 instance=ExtResource("4_tek06")]
+position = Vector2(425, 285)
+
+[node name="Slime5" parent="Enemies" unique_id=213962163 instance=ExtResource("4_tek06")]
+position = Vector2(320, 130)
+
+[node name="LevelTransition" parent="." unique_id=2019784961 instance=ExtResource("6_wi5as")]
+position = Vector2(240, 0)
+level = "uid://cu81jti3n0nkx"
+target_transition_Area = "LevelTransition2"
+size = 3
+side = 2
