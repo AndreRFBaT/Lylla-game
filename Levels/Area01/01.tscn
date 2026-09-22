@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bf746esgvktuf" path="res://Tile Maps/grass 01.tscn" id="1_vbl6q"]
 [ext_resource type="PackedScene" uid="uid://dcbubdc7g7336" path="res://Levels/player_spawn.tscn" id="2_chooo"]
 [ext_resource type="PackedScene" uid="uid://t8urtm4tn4ko" path="res://Levels/level_transition.tscn" id="3_22ele"]
-[ext_resource type="PackedScene" uid="uid://6uvaam3ycc68" path="res://Enemies/Enemy/Slime.tscn" id="4_4t7i1"]
+[ext_resource type="PackedScene" uid="uid://cm61h7mnm2p0c" path="res://Enemies/Enemy/Enemy.tscn" id="5_pwydo"]
 
 [node name="01" type="Node2D" unique_id=1160743096]
 script = ExtResource("1_pwydo")
@@ -26,5 +26,5 @@ position = Vector2(224, 320)
 level = "uid://7cfc2maong5k"
 side = 3
 
-[node name="Slime" parent="." unique_id=882579076 instance=ExtResource("4_4t7i1")]
-position = Vector2(353, 122)
+[node name="Enemy" parent="." unique_id=882579076 instance=ExtResource("5_pwydo")]
+position = Vector2(187, 155)

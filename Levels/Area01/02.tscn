@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bf746esgvktuf" path="res://Tile Maps/grass 01.tscn" id="1_wkbf4"]
 [ext_resource type="PackedScene" uid="uid://dcbubdc7g7336" path="res://Levels/player_spawn.tscn" id="2_x70af"]
 [ext_resource type="PackedScene" uid="uid://d31fpabs7pp8e" path="res://Props/Plants/plant.tscn" id="3_x70af"]
-[ext_resource type="PackedScene" uid="uid://6uvaam3ycc68" path="res://Enemies/Enemy/Slime.tscn" id="4_tek06"]
 [ext_resource type="PackedScene" uid="uid://t8urtm4tn4ko" path="res://Levels/level_transition.tscn" id="6_wi5as"]
+[ext_resource type="PackedScene" uid="uid://cm61h7mnm2p0c" path="res://Enemies/Enemy/Enemy.tscn" id="7_icgqb"]
 
 [node name="02" type="Node2D" unique_id=1747147378]
 y_sort_enabled = true
@@ -42,20 +42,17 @@ position = Vector2(320, 105)
 [node name="Enemies" type="Node2D" parent="." unique_id=55275125]
 y_sort_enabled = true
 
-[node name="Slime" parent="Enemies" unique_id=882579076 instance=ExtResource("4_tek06")]
-position = Vector2(199, 249)
+[node name="Enemy" parent="Enemies" unique_id=574960337 instance=ExtResource("7_icgqb")]
+position = Vector2(78, 141)
 
-[node name="Slime2" parent="Enemies" unique_id=1295091128 instance=ExtResource("4_tek06")]
-position = Vector2(49, 107)
+[node name="Enemy2" parent="Enemies" unique_id=1727864960 instance=ExtResource("7_icgqb")]
+position = Vector2(419, 167)
 
-[node name="Slime3" parent="Enemies" unique_id=1207483873 instance=ExtResource("4_tek06")]
-position = Vector2(412, 119)
+[node name="Enemy3" parent="Enemies" unique_id=1373698272 instance=ExtResource("7_icgqb")]
+position = Vector2(323, 259)
 
-[node name="Slime4" parent="Enemies" unique_id=1496790721 instance=ExtResource("4_tek06")]
-position = Vector2(425, 285)
-
-[node name="Slime5" parent="Enemies" unique_id=213962163 instance=ExtResource("4_tek06")]
-position = Vector2(320, 130)
+[node name="Enemy4" parent="Enemies" unique_id=1479774198 instance=ExtResource("7_icgqb")]
+position = Vector2(134, 259)
 
 [node name="LevelTransition" parent="." unique_id=2019784961 instance=ExtResource("6_wi5as")]
 position = Vector2(240, 0)

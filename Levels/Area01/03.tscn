@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bf746esgvktuf" path="res://Tile Maps/grass 01.tscn" id="1_fiocf"]
 [ext_resource type="Script" uid="uid://cx0b14d2m3tdb" path="res://Levels/Scripts/level.gd" id="1_ryupc"]
 [ext_resource type="PackedScene" uid="uid://dcbubdc7g7336" path="res://Levels/player_spawn.tscn" id="2_diysa"]
-[ext_resource type="PackedScene" uid="uid://6uvaam3ycc68" path="res://Enemies/Enemy/Slime.tscn" id="3_diysa"]
+[ext_resource type="PackedScene" uid="uid://6uvaam3ycc68" path="res://Enemies/Enemy/Enemy1.tscn" id="3_diysa"]
 [ext_resource type="PackedScene" uid="uid://t8urtm4tn4ko" path="res://Levels/level_transition.tscn" id="5_koc1c"]
 
 [node name="03" type="Node2D" unique_id=1747147378]
@@ -24,32 +24,32 @@ size = 3
 [node name="Enemies" type="Node2D" parent="." unique_id=1491360274]
 y_sort_enabled = true
 
-[node name="Slime" parent="Enemies" unique_id=882579076 instance=ExtResource("3_diysa")]
+[node name="Enemy" parent="Enemies" unique_id=882579076 instance=ExtResource("3_diysa")]
 position = Vector2(496, 118)
 
-[node name="Slime2" parent="Enemies" unique_id=220832513 instance=ExtResource("3_diysa")]
+[node name="Enemy2" parent="Enemies" unique_id=220832513 instance=ExtResource("3_diysa")]
 position = Vector2(192, 269)
 
-[node name="Slime3" parent="Enemies" unique_id=1229709706 instance=ExtResource("3_diysa")]
+[node name="Enemy3" parent="Enemies" unique_id=1229709706 instance=ExtResource("3_diysa")]
 position = Vector2(188, 104)
 
-[node name="Slime4" parent="Enemies" unique_id=1114908292 instance=ExtResource("3_diysa")]
+[node name="Enemy4" parent="Enemies" unique_id=1114908292 instance=ExtResource("3_diysa")]
 position = Vector2(81, 93)
 
-[node name="Slime5" parent="Enemies" unique_id=2095749859 instance=ExtResource("3_diysa")]
+[node name="Enemy5" parent="Enemies" unique_id=2095749859 instance=ExtResource("3_diysa")]
 position = Vector2(310, 125)
 
-[node name="Slime6" parent="Enemies" unique_id=2138610527 instance=ExtResource("3_diysa")]
+[node name="Enemy6" parent="Enemies" unique_id=2138610527 instance=ExtResource("3_diysa")]
 position = Vector2(615, 281)
 
-[node name="Slime7" parent="Enemies" unique_id=49461836 instance=ExtResource("3_diysa")]
+[node name="Enemy7" parent="Enemies" unique_id=49461836 instance=ExtResource("3_diysa")]
 position = Vector2(626, 185)
 
-[node name="Slime8" parent="Enemies" unique_id=2140893459 instance=ExtResource("3_diysa")]
+[node name="Enemy8" parent="Enemies" unique_id=2140893459 instance=ExtResource("3_diysa")]
 position = Vector2(115, 283)
 
-[node name="Slime9" parent="Enemies" unique_id=628834123 instance=ExtResource("3_diysa")]
+[node name="Enemy9" parent="Enemies" unique_id=628834123 instance=ExtResource("3_diysa")]
 position = Vector2(294, 224)
 
-[node name="Slime10" parent="Enemies" unique_id=12639339 instance=ExtResource("3_diysa")]
+[node name="Enemy10" parent="Enemies" unique_id=12639339 instance=ExtResource("3_diysa")]
 position = Vector2(87, 164)
