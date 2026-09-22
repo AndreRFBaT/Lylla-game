@@ -13,6 +13,8 @@ var hp : int = 6
 var max_hp : int = 6
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+#@onready var animation_player_2: AnimationPlayer = $AnimationPlayer2
+
 @onready var effect_animation_player: AnimationPlayer = $EffectAnimationPlayer
 @onready var hit_box: HitBox = $HitBox
 @onready var sprite: Sprite2D = $Sprite2D
@@ -58,7 +60,7 @@ func SetDirection() -> bool:
 		return false
 	cardinal_directions = new_direction
 	DirectionChanged.emit( new_direction )
-	sprite.scale.x = -1 if cardinal_directions == Vector2.LEFT else 1
+	sprite.scale.x = -0.4 if cardinal_directions == Vector2.LEFT else 0.4
 	return true
 
 
