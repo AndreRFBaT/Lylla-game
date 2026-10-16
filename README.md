@@ -34,8 +34,8 @@ Project structure:
 │   ├── Plants                       # Interactive or destructible environmental props (e.g., bushes, flowers)
 │   └── Sprites                      # Visual assets and textures for world props
 └── Tile Maps
-    ├── grass 01.tscn                # Pre-configured tilemap layer scene for ground/terrain rendering
-    ├── house.tscn                   # Structure tilemap scene including static collision layers
-    ├── Scripts                      # Custom scripts for handling dynamic tile behaviors or generation
-    └── Sprites                      # Source tilesets and sprite sheets used by TileMapLayers
+	├── grass 01.tscn                # Pre-configured tilemap layer scene for ground/terrain rendering
+	├── house.tscn                   # Structure tilemap scene including static collision layers
+	├── Scripts                      # Custom scripts for handling dynamic tile behaviors or generation
+	└── Sprites                      # Source tilesets and sprite sheets used by TileMapLayers
 ```
