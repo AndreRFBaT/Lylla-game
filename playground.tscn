@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dcbubdc7g7336" path="res://Levels/player_spawn.tscn" id="5_o00ia"]
 [ext_resource type="PackedScene" uid="uid://t8urtm4tn4ko" path="res://Levels/level_transition.tscn" id="6_4bqqs"]
 [ext_resource type="PackedScene" uid="uid://y67b3g3eivd1" path="res://Enemies/Enemy/EnemyFLea.tscn" id="7_ynsuh"]
+[ext_resource type="PackedScene" uid="uid://dchqbf0kfchkq" path="res://CatNPC/cat_npc.tscn" id="8_v7dth"]
+[ext_resource type="PackedScene" uid="uid://dgrejfif5va62" path="res://CatNPC/cat_npc_2.tscn" id="9_pi42a"]
 
 [node name="Playground" type="Node2D" unique_id=900410441]
 y_sort_enabled = true
@@ -72,5 +74,18 @@ position = Vector2(608, 768)
 size = 3
 side = 3
 
-[node name="Enemy2" parent="." unique_id=2123897449 instance=ExtResource("7_ynsuh")]
-position = Vector2(622, 288)
+[node name="Enemies" type="Node2D" parent="." unique_id=1702379627]
+
+[node name="Enemy3" parent="Enemies" unique_id=645577632 instance=ExtResource("3_ynsuh")]
+position = Vector2(486, 195)
+
+[node name="EnemyFlea" parent="Enemies" unique_id=1133109777 instance=ExtResource("7_ynsuh")]
+position = Vector2(509, 102)
+
+[node name="CatNPC" parent="." unique_id=1776227830 instance=ExtResource("8_v7dth")]
+position = Vector2(1101, 155)
+scale = Vector2(0.2, 0.2)
+
+[node name="CatNPC2" parent="." unique_id=164860205 instance=ExtResource("9_pi42a")]
+position = Vector2(1021, 260)
+scale = Vector2(0.2, 0.2)
