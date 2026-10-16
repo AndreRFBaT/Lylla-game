@@ -16,8 +16,8 @@
 [ext_resource type="AudioStream" uid="uid://kpmxunh2vim3" path="res://Player/Audio/hit_player.wav" id="14_4o78h"]
 [ext_resource type="Texture2D" uid="uid://cbxs5poqpnvbi" path="res://Player/Sprites/cat_bottom_aligned.png" id="17_wakke"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t32yo"]
-size = Vector2(26, 13)
+[sub_resource type="CircleShape2D" id="CircleShape2D_485vi"]
+radius = 7.0
 
 [sub_resource type="Animation" id="Animation_5d85y"]
 length = 0.001
@@ -1107,7 +1107,7 @@ script = ExtResource("1_nq6wp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=330657087]
 position = Vector2(0, 10)
-shape = SubResource("RectangleShape2D_t32yo")
+shape = SubResource("CircleShape2D_485vi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=360429011]
 position = Vector2(0, -13)
