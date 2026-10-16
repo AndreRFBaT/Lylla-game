@@ -1,9 +1,22 @@
+@tool
 class_name EnemyFlea extends Enemy
 
-
-@export var enemy_scale : Vector2 = Vector2(0.5, 0.5) # Ex: 0.5 deixa na metade do tamanho original
+# Change scale value as needed
+#@export var enemy_scale : Vector2 = Vector2(0.5, 0.5) 
+@export var enemy_scale : Vector2 = Vector2(0.5, 0.5):
+	set(value):
+		enemy_scale = value
+		if is_inside_tree() and sprite:
+			sprite.scale = enemy_scale
 
 func _ready() -> void:
+	# Change the scale of the sprite to the desired value
+	if sprite:
+		sprite.scale = enemy_scale
+	# if inside editor, stop to not execute IA logic
+	if Engine.is_editor_hint():
+		return
+
 	state_machine.initialize(self)
 	player = PlayerManager.player
 	hit_box.Damage.connect(_take_damage)
@@ -14,16 +27,17 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
-
 func SetDirection(_new_direction : Vector2) -> bool:
 	direction = _new_direction
 	if direction == Vector2.ZERO:
 		return false
 
-	var direction_id : int = int(round(
-		(direction + cardinal_directions * 0.1).angle()
-		/ TAU * DIR_4.size()
-	))
+	# Wrapi grants that index stay between 0 and DIR_4.size() - 1 (0 to 3)
+	var direction_id : int = wrapi(
+		int(round((direction + cardinal_directions * 0.1).angle() / TAU * DIR_4.size())),
+		0,
+		DIR_4.size()
+	)
 	var new_direction = DIR_4[direction_id]
 
 	if new_direction == cardinal_directions:
@@ -31,8 +45,7 @@ func SetDirection(_new_direction : Vector2) -> bool:
 
 	cardinal_directions = new_direction
 
-
-	# Preserve scale direction for animation flip
+	# Keep the configuration scale on enemy_scale and do H flip
 	var flip_factor : float = -1.0 if cardinal_directions == Vector2.LEFT else 1.0
 	sprite.scale.x = enemy_scale.x * flip_factor
 	sprite.scale.y = enemy_scale.y
