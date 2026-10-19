@@ -9,6 +9,8 @@ class_name CatNPC
 
 var cardinal_directions : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
+var can_interact: bool = false
+
 const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 
 @onready var sprite: Sprite2D = $Visual/Sprite2D
@@ -24,6 +26,9 @@ func _ready() -> void:
 
 	state_machine.initialize(self)
 	interact_area.body_entered.connect(_on_interact_body)
+	# Set can_interact to false initially, and enable it after a short delay
+	await get_tree().create_timer(0.5).timeout
+	can_interact = true
 
 
 func _physics_process(_delta: float) -> void:
@@ -75,6 +80,9 @@ func AnimDirection() -> String:
 
 
 func _on_interact_body(body: Node2D) -> void:
+	if not can_interact:
+		return
+
 	if body.is_in_group("player") or body == PlayerManager.player:
 		if has_node("CatStateMachine/Follow"):
 			state_machine.ChangeState($CatStateMachine/Follow)
