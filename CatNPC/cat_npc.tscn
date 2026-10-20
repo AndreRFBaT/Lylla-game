@@ -144,8 +144,8 @@ radius = 22.0
 height = 86.0
 
 [node name="CatNPC" type="CharacterBody2D" unique_id=1776227830]
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_13yql")
-cat_scale = null
 
 [node name="Visual" type="Node2D" parent="." unique_id=1845583272]
 
