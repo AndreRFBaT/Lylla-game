@@ -32,6 +32,20 @@ func initialize(_cat: CatNPC) -> void:
 		s.init()
 
 	if states.size() > 0:
+		# Set the initial target state to the first state in the list
+		var initial_target_state = states[0]
+
+		# Verify if the current scene is "lylla_house" and set the initial target state to "Wander" if it exists
+		var current_scene_file = get_tree().current_scene.scene_file_path
+		if "lylla_house" in current_scene_file:
+			#TODO = "Create a Wander state when they are in the Lylla's house"
+			# Search for the "Wander" state in the states array or idle
+			for s in states:
+				# Wander is used for now
+				if s.name == "Wander" or "Wander" in s.name:
+					initial_target_state = s
+					break
+
 		ChangeState(states[0])
 		process_mode = Node.PROCESS_MODE_INHERIT
 
