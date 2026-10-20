@@ -20,6 +20,12 @@ var _is_moving : bool = true
 
 func Enter() -> void:
 	_player = PlayerManager.player
+	LevelManager.is_cat_following = true
+
+	if cat and cat.scene_file_path != "":
+		# Load the cat scene from the path
+		LevelManager.cat_packed_scene = load(cat.scene_file_path)
+
 	if cat:
 		follow_slot = cat.get_following_cats_count()
 		# While entering, if the cat is far away, start walking
